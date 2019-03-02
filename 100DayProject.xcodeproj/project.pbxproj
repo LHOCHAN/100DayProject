@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30A0D4CD222A6022009BDDB4 /* Font in Resources */ = {isa = PBXBuildFile; fileRef = 30A0D4CC222A6022009BDDB4 /* Font */; };
 		30C52DC7222A54BF00902694 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C52DC6222A54BF00902694 /* AppDelegate.swift */; };
 		30C52DC9222A54BF00902694 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C52DC8222A54BF00902694 /* ViewController.swift */; };
 		30C52DCC222A54BF00902694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C52DCA222A54BF00902694 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30A0D4CC222A6022009BDDB4 /* Font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Font; sourceTree = "<group>"; };
 		30C52DC3222A54BF00902694 /* 100DayProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 100DayProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C52DC6222A54BF00902694 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C52DC8222A54BF00902694 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				30C52DD2222A54C300902694 /* LaunchScreen.storyboard */,
 				30C52DD5222A54C300902694 /* Info.plist */,
 				30C52DCD222A54BF00902694 /* _00DayProject.xcdatamodeld */,
+				30A0D4CC222A6022009BDDB4 /* Font */,
 			);
 			path = 100DayProject;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				30C52DD4222A54C300902694 /* LaunchScreen.storyboard in Resources */,
 				30C52DD1222A54C300902694 /* Assets.xcassets in Resources */,
 				30C52DCC222A54BF00902694 /* Main.storyboard in Resources */,
+				30A0D4CD222A6022009BDDB4 /* Font in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
