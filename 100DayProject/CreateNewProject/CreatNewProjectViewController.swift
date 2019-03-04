@@ -1,9 +1,9 @@
 //
 //  CreatNewProjectViewController.swift
-//  100day's Project
+//  100DayProject
 //
-//  Created by 이호찬 on 31/12/2018.
-//  Copyright © 2018 EverydayPJ. All rights reserved.
+//  Created by 이호찬 on 02/03/2019.
+//  Copyright © 2019 100DayTeam. All rights reserved.
 //
 
 import UIKit
@@ -26,6 +26,7 @@ class CreatNewProjectViewController: UIViewController {
     @IBOutlet weak var soundBackgroundView: UIView!
     
     @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var selectedColor = UIColor(red: 19/255, green: 194/255, blue: 157/255, alpha: 0.1)
     
@@ -69,6 +70,9 @@ class CreatNewProjectViewController: UIViewController {
         super.viewDidLoad()
         
         confirmButton.isEnabled = false
+        titleTextField.delegate = self
+        descriptionTextField.delegate = self
+        scrollView.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -88,6 +92,7 @@ class CreatNewProjectViewController: UIViewController {
             isCameraDisabled = true
         }
     }
+    
     @IBAction func actionTapSoundView(_ sender: UITapGestureRecognizer) {
         if isSoundDisabled {
             isSoundDisabled = !isSoundDisabled
@@ -95,7 +100,6 @@ class CreatNewProjectViewController: UIViewController {
             isNoteDisabled = true
         }
     }
-    
     
     @IBAction func actionDismiss(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -112,7 +116,13 @@ extension CreatNewProjectViewController: TextFieldisMaxDelegate {
 }
 
 extension CreatNewProjectViewController: UITextFieldDelegate {
-    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        view.endEditing(true)
+    }
 }
 
-
+extension CreatNewProjectViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
+}

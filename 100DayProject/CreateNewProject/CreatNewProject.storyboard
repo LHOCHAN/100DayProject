@@ -393,6 +393,7 @@
                         <outlet property="dummySoundView" destination="rNq-RW-1VJ" id="2f4-sg-b1l"/>
                         <outlet property="noteBackgroundView" destination="PtH-Gu-yy6" id="MvP-m3-QBu"/>
                         <outlet property="noteImageView" destination="iEF-Fc-wlu" id="yZX-mj-9BS"/>
+                        <outlet property="scrollView" destination="hj7-Up-ioi" id="Ips-co-vKw"/>
                         <outlet property="soundBackgroundView" destination="X3E-bC-REI" id="gBG-pg-cDl"/>
                         <outlet property="soundImageView" destination="fLj-BD-FlZ" id="abk-0n-yGq"/>
                         <outlet property="titleTextField" destination="3ai-Z3-DRd" id="9Ob-BW-vs5"/>

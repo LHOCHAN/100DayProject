@@ -1,9 +1,9 @@
 //
 //  StartNewProjectViewController.swift
-//  100day's Project
+//  100DayProject
 //
-//  Created by 이호찬 on 31/12/2018.
-//  Copyright © 2018 EverydayPJ. All rights reserved.
+//  Created by 이호찬 on 02/03/2019.
+//  Copyright © 2019 100DayTeam. All rights reserved.
 //
 
 import UIKit
