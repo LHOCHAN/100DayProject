@@ -21,7 +21,7 @@
         <!--Upload Camera Photo View Controller-->
         <scene sceneID="cDt-PF-YOO">
             <objects>
-                <viewController id="Z3r-hO-Y3i" customClass="UploadCameraPhotoViewController" sceneMemberID="viewController">
+                <viewController id="Z3r-hO-Y3i" customClass="UploadCameraPhotoViewController" customModule="_00DayProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Be-gk-kGJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,26 +60,33 @@
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="Iui-WQ-H6e">
-                                                <rect key="frame" x="16" y="80" width="343" height="344"/>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="Iui-WQ-H6e">
+                                                <rect key="frame" x="16" y="80" width="345" height="344"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="345" id="CXv-RJ-0aa"/>
+                                                    <constraint firstAttribute="height" constant="344" id="TDl-sb-JLY"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="rSi-PT-BQj" appends="YES" id="lMP-01-hP2"/>
+                                                </connections>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="cNk-ka-zzG" firstAttribute="top" secondItem="rJV-zd-8pY" secondAttribute="top" constant="16" id="08U-19-oqK"/>
-                                            <constraint firstItem="GMM-bC-EIb" firstAttribute="top" secondItem="Iui-WQ-H6e" secondAttribute="bottom" constant="32" id="2J4-Th-Ko7"/>
                                             <constraint firstItem="GMM-bC-EIb" firstAttribute="leading" secondItem="rJV-zd-8pY" secondAttribute="leading" constant="24" id="2KT-aM-mTu"/>
                                             <constraint firstAttribute="trailing" secondItem="GMM-bC-EIb" secondAttribute="trailing" constant="24" id="8Jm-PE-iYh"/>
-                                            <constraint firstAttribute="trailing" secondItem="Iui-WQ-H6e" secondAttribute="trailing" constant="16" id="9ta-lW-zfF"/>
                                             <constraint firstItem="CV8-SB-Ysk" firstAttribute="top" secondItem="GMM-bC-EIb" secondAttribute="bottom" constant="11" id="BLw-Lc-GnA"/>
                                             <constraint firstItem="NeX-py-eaS" firstAttribute="leading" secondItem="rJV-zd-8pY" secondAttribute="leading" constant="24" id="GEu-dV-Pet"/>
                                             <constraint firstItem="NeX-py-eaS" firstAttribute="top" secondItem="CV8-SB-Ysk" secondAttribute="bottom" constant="24" id="M2w-Ei-8yD"/>
                                             <constraint firstAttribute="trailing" secondItem="cNk-ka-zzG" secondAttribute="trailing" constant="16" id="Wim-cl-18W"/>
-                                            <constraint firstItem="Iui-WQ-H6e" firstAttribute="leading" secondItem="rJV-zd-8pY" secondAttribute="leading" constant="16" id="aHk-fe-EzE"/>
+                                            <constraint firstItem="GMM-bC-EIb" firstAttribute="top" secondItem="Iui-WQ-H6e" secondAttribute="bottom" constant="32" id="jcZ-CI-Wc6"/>
                                             <constraint firstAttribute="trailing" secondItem="NeX-py-eaS" secondAttribute="trailing" constant="25" id="lFB-hY-n1L"/>
+                                            <constraint firstItem="Iui-WQ-H6e" firstAttribute="top" secondItem="cNk-ka-zzG" secondAttribute="bottom" constant="24" id="lJw-Ei-jNY"/>
                                             <constraint firstItem="CV8-SB-Ysk" firstAttribute="leading" secondItem="rJV-zd-8pY" secondAttribute="leading" constant="26" id="mbY-dO-7pp"/>
+                                            <constraint firstItem="Iui-WQ-H6e" firstAttribute="leading" secondItem="rJV-zd-8pY" secondAttribute="leading" constant="16" id="sNU-cJ-81i"/>
                                             <constraint firstItem="cNk-ka-zzG" firstAttribute="leading" secondItem="rJV-zd-8pY" secondAttribute="leading" constant="16" id="uKa-gc-aws"/>
-                                            <constraint firstItem="Iui-WQ-H6e" firstAttribute="top" secondItem="cNk-ka-zzG" secondAttribute="bottom" constant="24" id="uai-PV-cdb"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -110,8 +117,22 @@
                             <color key="tintColor" red="0.074509803921568626" green="0.76078431372549016" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="fYL-qZ-FEv" id="hGK-FL-TeA"/>
+                        <outlet property="dataLabel" destination="CV8-SB-Ysk" id="aPb-bg-ySK"/>
+                        <outlet property="dayLabel" destination="cNk-ka-zzG" id="nC8-xq-5hp"/>
+                        <outlet property="descTextView" destination="NeX-py-eaS" id="SI8-T2-d29"/>
+                        <outlet property="imageView" destination="Iui-WQ-H6e" id="aWq-ye-hY0"/>
+                        <outlet property="saveButton" destination="4ei-wV-jLU" id="cf9-dC-dix"/>
+                        <outlet property="titleTextField" destination="GMM-bC-EIb" id="eEg-79-Bkf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lrv-8c-ZUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rSi-PT-BQj">
+                    <connections>
+                        <action selector="imageViewDidTap:" destination="Z3r-hO-Y3i" id="Tv9-jn-cke"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1168.8" y="-127.83251231527095"/>
         </scene>
