@@ -5,11 +5,21 @@
 //  Created by 공지원 on 05/03/2019.
 //  Copyright © 2019 100DayTeam. All rights reserved.
 //
+/* TODO
+ 네비바 버튼들 폰트 변경하기,
+ 이미지뷰 모서리를 둥글게 만들기,
+ save 버튼 활성화 기준 논의하기(최소한 이미지는 있어야지 save 가능?),
+ 텍스트뷰 placeholder,
+ 이미지뷰 탭시, 커스텀 카메라롤 뷰 모달로 띄우기,
+ 키보드 높이 설정,
+ 오늘자 날짜 가져오기,
+ 
+ 
+ */
 
 import UIKit
 
 class UploadCameraPhotoViewController: UIViewController {
-    //TODO : - 네비바 버튼 폰트 변경하기
     
     //MARK : - Property
     lazy var imagePicker: UIImagePickerController = {
@@ -32,17 +42,18 @@ class UploadCameraPhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setDelegate()
+        setUp()
     }
     
-    func setDelegate() {
+    func setUp() {
         titleTextField.delegate = self
+        
+        imageView.layer.cornerRadius = 10.0
+        imageView.clipsToBounds = true
     }
     
     //MARK : - Action
     @IBAction func imageViewDidTap(_ sender: Any) {
-        //TODO : - imageView가 tap되면, 이미지 피커 컨트롤러를 present한다.
-        print("imageViewDidTap")
         present(imagePicker, animated: true, completion: nil)
     }
 }
