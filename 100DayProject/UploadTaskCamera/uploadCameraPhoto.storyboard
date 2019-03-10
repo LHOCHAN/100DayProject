@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FNz-cg-Tlm">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Camera Roll-->
+        <scene sceneID="MOR-qq-hYG">
+            <objects>
+                <viewController id="maQ-Qu-pBl" customClass="CameraRollViewController" customModule="_00DayProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I7F-cU-GN5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kaB-6i-hHu">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tuc-Rh-DTB">
+                                    <size key="itemSize" width="100" height="101"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="JpP-K3-wrr" customClass="CameraRollCollectionViewCell" customModule="_00DayProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="101"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="101"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6IJ-bu-EOw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="101"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Skq-NL-NRy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="101"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="6IJ-bu-EOw" firstAttribute="top" secondItem="JpP-K3-wrr" secondAttribute="top" id="CR5-Pp-NgX"/>
+                                            <constraint firstAttribute="trailing" secondItem="6IJ-bu-EOw" secondAttribute="trailing" id="Edg-VG-xhB"/>
+                                            <constraint firstItem="6IJ-bu-EOw" firstAttribute="leading" secondItem="JpP-K3-wrr" secondAttribute="leading" id="HdR-hR-WWW"/>
+                                            <constraint firstAttribute="bottom" secondItem="Skq-NL-NRy" secondAttribute="bottom" id="RBk-Ee-0ud"/>
+                                            <constraint firstItem="Skq-NL-NRy" firstAttribute="top" secondItem="JpP-K3-wrr" secondAttribute="top" id="VQ6-bN-dk1"/>
+                                            <constraint firstAttribute="bottom" secondItem="6IJ-bu-EOw" secondAttribute="bottom" id="hY3-3x-8Jp"/>
+                                            <constraint firstItem="Skq-NL-NRy" firstAttribute="leading" secondItem="JpP-K3-wrr" secondAttribute="leading" id="qcQ-2e-6WX"/>
+                                            <constraint firstAttribute="trailing" secondItem="Skq-NL-NRy" secondAttribute="trailing" id="t91-0u-Cd2"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cameraRollImageView" destination="6IJ-bu-EOw" id="B8v-WK-mE1"/>
+                                            <outlet property="edgeView" destination="Skq-NL-NRy" id="rxc-W9-eQm"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="maQ-Qu-pBl" id="IyP-qJ-LgC"/>
+                                    <outlet property="delegate" destination="maQ-Qu-pBl" id="UE9-zd-13J"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wWC-Ve-jz6" firstAttribute="bottom" secondItem="kaB-6i-hHu" secondAttribute="bottom" id="0lQ-Jv-RNJ"/>
+                            <constraint firstItem="kaB-6i-hHu" firstAttribute="top" secondItem="wWC-Ve-jz6" secondAttribute="top" id="VmT-ud-KeO"/>
+                            <constraint firstItem="kaB-6i-hHu" firstAttribute="leading" secondItem="wWC-Ve-jz6" secondAttribute="leading" id="jHj-I2-sRN"/>
+                            <constraint firstItem="wWC-Ve-jz6" firstAttribute="trailing" secondItem="kaB-6i-hHu" secondAttribute="trailing" id="zJV-6r-h3Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wWC-Ve-jz6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Camera Roll" id="5XF-bg-8UB">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="7tG-27-ErC">
+                            <color key="tintColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="YjT-0Z-cBb">
+                            <color key="tintColor" name="topaz"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tta-mv-6wd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1733.5999999999999" y="-128.57142857142858"/>
+        </scene>
+        <!--Upload Camera Photo View Controller-->
+        <scene sceneID="cDt-PF-YOO">
+            <objects>
+                <viewController id="Z3r-hO-Y3i" customClass="UploadCameraPhotoViewController" customModule="_00DayProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Be-gk-kGJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36s-zB-hnX">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJV-zd-8pY">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="759"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNk-ka-zzG">
+                                                <rect key="frame" x="16" y="15.999999999999996" width="343" height="39.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="33"/>
+                                                <color key="textColor" red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GMM-bC-EIb">
+                                                <rect key="frame" x="24" y="455.66666666666663" width="327" height="36"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘 날짜 가져와서 보여주기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CV8-SB-Ysk">
+                                                <rect key="frame" x="26" y="502.66666666666663" width="179" height="19"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                                <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NeX-py-eaS">
+                                                <rect key="frame" x="24" y="545.66666666666663" width="326" height="128"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="k3D-RV-JkI"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.72941176470588232" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="Iui-WQ-H6e">
+                                                <rect key="frame" x="16" y="79.666666666666657" width="345" height="344"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="345" id="CXv-RJ-0aa"/>
+                                                    <constraint firstAttribute="height" constant="344" id="TDl-sb-JLY"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="rSi-PT-BQj" appends="YES" id="lMP-01-hP2"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="cNk-ka-zzG" firstAttribute="top" secondItem="rJV-zd-8pY" secondAttribute="top" constant="16" id="08U-19-oqK"/>
+                                            <constraint firstItem="GMM-bC-EIb" firstAttribute="leading" secondItem="rJV-zd-8pY" secondAttribute="leading" constant="24" id="2KT-aM-mTu"/>
+                                            <constraint firstAttribute="trailing" secondItem="GMM-bC-EIb" secondAttribute="trailing" constant="24" id="8Jm-PE-iYh"/>
+                                            <constraint firstItem="CV8-SB-Ysk" firstAttribute="top" secondItem="GMM-bC-EIb" secondAttribute="bottom" constant="11" id="BLw-Lc-GnA"/>
+                                            <constraint firstItem="NeX-py-eaS" firstAttribute="leading" secondItem="rJV-zd-8pY" secondAttribute="leading" constant="24" id="GEu-dV-Pet"/>
+                                            <constraint firstItem="NeX-py-eaS" firstAttribute="top" secondItem="CV8-SB-Ysk" secondAttribute="bottom" constant="24" id="M2w-Ei-8yD"/>
+                                            <constraint firstAttribute="trailing" secondItem="cNk-ka-zzG" secondAttribute="trailing" constant="16" id="Wim-cl-18W"/>
+                                            <constraint firstItem="GMM-bC-EIb" firstAttribute="top" secondItem="Iui-WQ-H6e" secondAttribute="bottom" constant="32" id="jcZ-CI-Wc6"/>
+                                            <constraint firstAttribute="trailing" secondItem="NeX-py-eaS" secondAttribute="trailing" constant="25" id="lFB-hY-n1L"/>
+                                            <constraint firstItem="Iui-WQ-H6e" firstAttribute="top" secondItem="cNk-ka-zzG" secondAttribute="bottom" constant="24" id="lJw-Ei-jNY"/>
+                                            <constraint firstItem="CV8-SB-Ysk" firstAttribute="leading" secondItem="rJV-zd-8pY" secondAttribute="leading" constant="26" id="mbY-dO-7pp"/>
+                                            <constraint firstItem="Iui-WQ-H6e" firstAttribute="leading" secondItem="rJV-zd-8pY" secondAttribute="leading" constant="16" id="sNU-cJ-81i"/>
+                                            <constraint firstItem="cNk-ka-zzG" firstAttribute="leading" secondItem="rJV-zd-8pY" secondAttribute="leading" constant="16" id="uKa-gc-aws"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="5Z6-RV-x2r" appends="YES" id="Mee-o3-Er7"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="rJV-zd-8pY" secondAttribute="bottom" id="Ldt-Kw-gq6"/>
+                                    <constraint firstAttribute="trailing" secondItem="rJV-zd-8pY" secondAttribute="trailing" id="TX9-ic-Vfc"/>
+                                    <constraint firstItem="rJV-zd-8pY" firstAttribute="height" secondItem="36s-zB-hnX" secondAttribute="height" multiplier="1.1" id="VLS-nU-X2C"/>
+                                    <constraint firstItem="rJV-zd-8pY" firstAttribute="width" secondItem="36s-zB-hnX" secondAttribute="width" id="WlA-Oq-WiH"/>
+                                    <constraint firstItem="rJV-zd-8pY" firstAttribute="top" secondItem="36s-zB-hnX" secondAttribute="top" id="ZqW-34-KYC"/>
+                                    <constraint firstItem="rJV-zd-8pY" firstAttribute="leading" secondItem="36s-zB-hnX" secondAttribute="leading" id="kXT-dw-k3d"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="36s-zB-hnX" firstAttribute="leading" secondItem="A8d-cq-ncn" secondAttribute="leading" id="9uM-hQ-8Pe"/>
+                            <constraint firstItem="A8d-cq-ncn" firstAttribute="trailing" secondItem="36s-zB-hnX" secondAttribute="trailing" id="LBs-re-Kmt"/>
+                            <constraint firstItem="36s-zB-hnX" firstAttribute="top" secondItem="A8d-cq-ncn" secondAttribute="top" id="cYq-wd-zJT"/>
+                            <constraint firstItem="A8d-cq-ncn" firstAttribute="bottom" secondItem="36s-zB-hnX" secondAttribute="bottom" id="pbn-ya-DwT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A8d-cq-ncn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2i8-rP-EXP">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="fYL-qZ-FEv">
+                            <color key="tintColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="4ei-wV-jLU">
+                            <color key="tintColor" red="0.074509803921568626" green="0.76078431372549016" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="fYL-qZ-FEv" id="hGK-FL-TeA"/>
+                        <outlet property="contentView" destination="rJV-zd-8pY" id="6Mt-QK-2mr"/>
+                        <outlet property="dateLabel" destination="CV8-SB-Ysk" id="aPb-bg-ySK"/>
+                        <outlet property="dayLabel" destination="cNk-ka-zzG" id="nC8-xq-5hp"/>
+                        <outlet property="descTextView" destination="NeX-py-eaS" id="SI8-T2-d29"/>
+                        <outlet property="imageView" destination="Iui-WQ-H6e" id="aWq-ye-hY0"/>
+                        <outlet property="saveButton" destination="4ei-wV-jLU" id="cf9-dC-dix"/>
+                        <outlet property="scrollView" destination="36s-zB-hnX" id="LM7-E9-tv3"/>
+                        <outlet property="titleTextField" destination="GMM-bC-EIb" id="eEg-79-Bkf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lrv-8c-ZUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rSi-PT-BQj">
+                    <connections>
+                        <action selector="imageViewDidTap:" destination="Z3r-hO-Y3i" id="Tv9-jn-cke"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="5Z6-RV-x2r">
+                    <connections>
+                        <action selector="contentViewDidTap:" destination="Z3r-hO-Y3i" id="FGQ-Ui-2l6"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2608.8000000000002" y="-129.31034482758622"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ymp-FH-Yua">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FNz-cg-Tlm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vnF-HZ-OGA">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Z3r-hO-Y3i" kind="relationship" relationship="rootViewController" id="XJr-MP-Gee"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ehj-Ty-ccI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="-129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image" width="345" height="344"/>
+        <namedColor name="topaz">
+            <color red="0.075000002980232239" green="0.76099997758865356" blue="0.71799999475479126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
