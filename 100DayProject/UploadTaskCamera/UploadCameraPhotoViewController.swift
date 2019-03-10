@@ -7,14 +7,10 @@
 //
 /* TODO
  네비바 버튼들 폰트 변경하기,
- 이미지뷰 모서리를 둥글게 만들기,
- save 버튼 활성화 기준 논의하기(최소한 이미지는 있어야지 save 가능?),
- 텍스트뷰 placeholder,
+ 날짜 달을 숫자가 아닌 문자로 변경,
+ 
  이미지뷰 탭시, 커스텀 카메라롤 뷰 모달로 띄우기,
- 키보드 높이 설정,
- 오늘자 날짜 가져오기,
- 
- 
+ save 버튼 활성화 기준 논의하기(최소한 이미지는 있어야지 save 가능?),
  */
 
 import UIKit
@@ -30,31 +26,70 @@ class UploadCameraPhotoViewController: UIViewController {
         return imagePicker
     }()
     
+    let date = Date()
+    
+    let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        return dateFormatter
+    }()
+    
+    lazy var todayDate: String = {
+        let todayDate = dateFormatter.string(from: self.date)
+        return todayDate
+    }()
+    
     //MARK : - Outlet
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descTextView: UITextView!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUp()
+        commonInit()
     }
     
-    func setUp() {
+    func commonInit() {
         titleTextField.delegate = self
+        descTextView.delegate = self
         
         imageView.layer.cornerRadius = 10.0
         imageView.clipsToBounds = true
+        
+        dateLabel.text = todayDate
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(_ sender: Notification) {
+        guard let userInfo = sender.userInfo else { return }
+        guard let keyboardSize = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        let keyboardHeight = keyboardSize.height
+        
+        view.frame.origin.y = -keyboardHeight
+        scrollView.contentInset.top = keyboardHeight
+    }
+    
+    @objc func keyboardWillHide(_ sender: Notification) {
+        view.frame.origin.y = 0
+        scrollView.contentInset = UIEdgeInsets.zero
     }
     
     //MARK : - Action
     @IBAction func imageViewDidTap(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func contentViewDidTap(_ sender: UITapGestureRecognizer) {
+        contentView.endEditing(true)
     }
 }
 
@@ -84,6 +119,14 @@ extension UploadCameraPhotoViewController: UITextFieldDelegate {
 
 //MARK: - TextView Delegate
 extension UploadCameraPhotoViewController: UITextViewDelegate {
-    //TODO : - return키 누르면 키보드가 내려가도록 구현
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = ""
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == "" {
+            textView.text = "Description"
+        }
+    }
 }
 
