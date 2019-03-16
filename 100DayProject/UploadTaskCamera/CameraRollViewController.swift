@@ -16,6 +16,11 @@ class CameraRollViewController: UIViewController, UICollectionViewDataSource, UI
     private let minimumInteritemSpacingForSectionAt: CGFloat = 7.0
     private let numOfItemsForRow = 3
     
+    var subtype: PHAssetCollectionSubtype?
+
+    var fetchResult: PHFetchResult<PHAsset>!
+    let imageManager: PHCachingImageManager = PHCachingImageManager()
+    
 //    private lazy var imagePicker: UIImagePickerController = {
 //       let imagePicker = UIImagePickerController()
 //        imagePicker.sourceType = .camera
@@ -28,6 +33,7 @@ class CameraRollViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        requestCollection()
     }
     
     /*
@@ -43,7 +49,7 @@ class CameraRollViewController: UIViewController, UICollectionViewDataSource, UI
     */
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return fetchResult.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -54,10 +60,37 @@ class CameraRollViewController: UIViewController, UICollectionViewDataSource, UI
             cell.cameraRollImageView.image = #imageLiteral(resourceName: "cameraWhite64")
         }
         else {
-            cell.cameraRollImageView.image = #imageLiteral(resourceName: "image")
+            let asset: PHAsset = fetchResult.object(at: indexPath.row)
+            DispatchQueue.global().async {
+                self.imageManager.requestImage(for: asset,
+                                               targetSize: CGSize(width: 150, height: 150),
+                                               contentMode: .aspectFill,
+                                               options: nil) { (image, _) in
+                                                DispatchQueue.main.async {
+                                                    
+                                                    cell.cameraRollImageView.image = image
+                                                    
+                                                }
+                }
+            }
         }
         
         return cell
+    }
+    
+    func requestCollection() {
+        
+        let cameraRoll: PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: subtype ?? .smartAlbumUserLibrary, options: nil)
+        
+        guard let cameraRollCollection = cameraRoll.firstObject else {
+            return
+        }
+        
+        let fetchOptions = PHFetchOptions()
+        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        self.fetchResult = PHAsset.fetchAssets(in: cameraRollCollection, options: fetchOptions)
+        
+        
     }
     
     //Delegate

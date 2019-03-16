@@ -85,7 +85,8 @@ class UploadCameraPhotoViewController: UIViewController {
     
     //MARK : - Action
     @IBAction func imageViewDidTap(_ sender: Any) {
-        present(imagePicker, animated: true, completion: nil)
+//        present(imagePicker, animated: true, completion: nil)
+        performSegue(withIdentifier: "uploadCameraToCameraRoll", sender: nil)
     }
     
     @IBAction func contentViewDidTap(_ sender: UITapGestureRecognizer) {
