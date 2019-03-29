@@ -5,63 +5,70 @@
 //  Created by 공지원 on 05/03/2019.
 //  Copyright © 2019 100DayTeam. All rights reserved.
 //
-/* TODO
- 네비바 버튼들 폰트 변경하기,
- 날짜 달을 숫자가 아닌 문자로 변경,
- 
- 이미지뷰 탭시, 커스텀 카메라롤 뷰 모달로 띄우기,
- save 버튼 활성화 기준 논의하기(최소한 이미지는 있어야지 save 가능?),
- */
 
 import UIKit
 
 class UploadCameraPhotoViewController: UIViewController {
     
-    //MARK : - Property
-    lazy var imagePicker: UIImagePickerController = {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.allowsEditing = true
-        imagePicker.delegate = self
-        return imagePicker
-    }()
-    
-    let date = Date()
-    
-    let dateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy"
-        return dateFormatter
-    }()
-    
-    lazy var todayDate: String = {
-        let todayDate = dateFormatter.string(from: self.date)
-        return todayDate
-    }()
-    
     //MARK : - Outlet
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var dayLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    //@IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descTextView: UITextView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    //MARK : - Property
+    var numOfSelectedPhotos = 1
+    
+    private let cellIdentifier = "UploadCameraPhotoCollectionViewCell"
+    
+    private let date = Date()
+    
+    private let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd. MMM. yyyy"
+        return dateFormatter
+    }()
+    
+    private lazy var todayDate: String = {
+        let todayDate = dateFormatter.string(from: self.date)
+        return todayDate
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpCollectionView()
         commonInit()
     }
     
-    func commonInit() {
+    private func setUpCollectionView() {
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.itemSize = CGSize(width: view.frame.width - 10, height: 327)
+        }
+    }
+    
+    private func commonInit() {
         titleTextField.delegate = self
         descTextView.delegate = self
         
-        imageView.layer.cornerRadius = 10.0
-        imageView.clipsToBounds = true
+        //imageView.layer.cornerRadius = 10.0
+        //imageView.clipsToBounds = true
+        /* 이미지 그림자 넣기
+         imageView.layer.shadowOffset = CGSize(width: 0, height: 1)
+         imageView.layer.shadowColor = UIColor.black.cgColor
+         imageView.layer.shadowOpacity = 1
+         imageView.layer.shadowRadius = 6
+         */
         
         dateLabel.text = todayDate
         
@@ -69,6 +76,7 @@ class UploadCameraPhotoViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    //MARK: - Handle keyboard
     @objc func keyboardWillShow(_ sender: Notification) {
         guard let userInfo = sender.userInfo else { return }
         guard let keyboardSize = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
@@ -84,8 +92,8 @@ class UploadCameraPhotoViewController: UIViewController {
     }
     
     //MARK : - Action
+    
     @IBAction func imageViewDidTap(_ sender: Any) {
-        present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func contentViewDidTap(_ sender: UITapGestureRecognizer) {
@@ -94,20 +102,22 @@ class UploadCameraPhotoViewController: UIViewController {
 }
 
 //MARK : - Image Picker Delegate
-extension UploadCameraPhotoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        print("didFinishPickingMediaWithInfo")
-        dismiss(animated: true) {
-            let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
-            self.imageView.image = selectedImage
-        }
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-        print("imagePickerControllerDidCancel")
-    }
-}
+/*
+ extension UploadCameraPhotoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+ print("didFinishPickingMediaWithInfo")
+ dismiss(animated: true) {
+ let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+ self.imageView.image = selectedImage
+ }
+ }
+ 
+ func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+ dismiss(animated: true, completion: nil)
+ print("imagePickerControllerDidCancel")
+ }
+ }
+ */
 
 //MARK : - TextField Delegate
 extension UploadCameraPhotoViewController: UITextFieldDelegate {
@@ -130,3 +140,26 @@ extension UploadCameraPhotoViewController: UITextViewDelegate {
     }
 }
 
+//MARK: - CollectionView Data Source
+extension UploadCameraPhotoViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? UploadCameraPhotoCollectionViewCell else { return UICollectionViewCell()
+        }
+        
+        //cell.backgroundColor = .red
+        cell.configure(image: #imageLiteral(resourceName: "image"))
+        
+        return cell
+    }
+}
+
+//MARK: - CollectionView Delegate
+extension UploadCameraPhotoViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("didSelectItemAt")
+    }
+}

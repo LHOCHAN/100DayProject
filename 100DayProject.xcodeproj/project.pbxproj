@@ -49,15 +49,15 @@
 		091B7640028E24E67FBEC8F60EECE48A /* 100DayProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 100DayProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A63208714CDA5E757EC0A66CAA3E59F /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		0D513C3715782B28E1644BFC1B6B8DB2 /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
-		166C6335B639E22CDC6F5F95F94DE156 /* CameraRollCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraRollCollectionViewCell.swift; path = ../../../../Downloads/100Days/100DayProject/UploadTaskCamera/CameraRollCollectionViewCell.swift; sourceTree = "<group>"; };
+		166C6335B639E22CDC6F5F95F94DE156 /* CameraRollCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRollCollectionViewCell.swift; sourceTree = "<group>"; };
 		1ED528C2CB00B478F7D10AD1DBDAA6A1 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		2C7757C10299315C17FE121286B86A1D /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
 		2DDE8B7911BA00644D58211F01A40479 /* StartNewProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartNewProjectViewController.swift; sourceTree = "<group>"; };
 		3567B6C072B8BDD0AFEC554CA75F5018 /* RecordSound.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecordSound.storyboard; sourceTree = "<group>"; };
-		402D5C574C43AB94891A282673942679 /* UploadCameraPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadCameraPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		402D5C574C43AB94891A282673942679 /* UploadCameraPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCameraPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		4B20D6A9D12E9023E1D77C5A788CABEE /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
 		4D7D34275C5DFB9151FE1AE2CE9AFCFB /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		56E71237C149674378D3124033FE2009 /* UploadCameraPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UploadCameraPhotoViewController.swift; path = ../../../../Downloads/100Days/100DayProject/UploadTaskCamera/UploadCameraPhotoViewController.swift; sourceTree = "<group>"; };
+		56E71237C149674378D3124033FE2009 /* UploadCameraPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCameraPhotoViewController.swift; sourceTree = "<group>"; };
 		5F75AB8E6AB0B8BD30543796A1ACD0F2 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		628CF0A2E39658291DFDB8350F2C8E1A /* Lato-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-MediumItalic.ttf"; sourceTree = "<group>"; };
 		648A5267F482667E051EEABCCDC9A695 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		A3F506CB4FDEC041E4F365DCFF628219 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		BBD69F63EC4D5EF469AC80B88C0F9F74 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
 		BE05F8540FA5640F4A3E3AABC89D7BB8 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
-		C1BA1931C528269AFB97B089785564E8 /* CameraRollPhotoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraRollPhotoListViewController.swift; sourceTree = "<group>"; };
+		C1BA1931C528269AFB97B089785564E8 /* CameraRollPhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRollPhotoListViewController.swift; sourceTree = "<group>"; };
 		C7315DA42A8AA3BEAFE917FACD63CF7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C92C3A46E5F6802D220C3B4F3C3D370D /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
 		CFD1773089CC0D0CDB7D3154DD0FFBB8 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		EA5B705BA336A9B3BE626367E80395D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB20D15450C393DFF4EA81B382AB879A /* CreatNewProject.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreatNewProject.storyboard; sourceTree = "<group>"; };
 		F31E3FEEF8CDAF41E87C20F5EED7BEDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F43BFF74F47385C45E8E3809B25B4B88 /* uploadCameraPhoto.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = uploadCameraPhoto.storyboard; path = ../../../../Downloads/100Days/100DayProject/UploadTaskCamera/uploadCameraPhoto.storyboard; sourceTree = "<group>"; };
+		F43BFF74F47385C45E8E3809B25B4B88 /* uploadCameraPhoto.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = uploadCameraPhoto.storyboard; path = ../../../uploadCameraPhoto.storyboard; sourceTree = "<group>"; };
 		F7CD67E277569E41CF69B7B42858CEB3 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
 		FF18D8A87C3D16CC36C62F016FD32EB7 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */

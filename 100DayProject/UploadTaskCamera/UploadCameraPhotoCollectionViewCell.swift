@@ -17,7 +17,7 @@ class UploadCameraPhotoCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(image: UIImage) {
-        imageView.image = image 
+        imageView.image = image
     }
     
 }

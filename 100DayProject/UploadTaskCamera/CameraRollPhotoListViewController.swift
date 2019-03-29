@@ -10,7 +10,7 @@ import UIKit
 import Photos
 
 class CameraRollPhotoListViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     private let cellIdentifier = "collectionViewCell"
@@ -30,7 +30,7 @@ class CameraRollPhotoListViewController: UIViewController {
         super.viewDidLoad()
         
         imagePickerController.delegate = self
-
+        
         setUpCollectionView()
         
         requestAuthorization()
@@ -148,7 +148,7 @@ extension CameraRollPhotoListViewController: UICollectionViewDataSource {
     }
 }
 
-//MARK: - CollectionView Delegate 
+//MARK: - CollectionView Delegate
 extension CameraRollPhotoListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
