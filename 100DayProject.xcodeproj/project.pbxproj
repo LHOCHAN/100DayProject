@@ -79,7 +79,7 @@
 		EA5B705BA336A9B3BE626367E80395D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB20D15450C393DFF4EA81B382AB879A /* CreatNewProject.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreatNewProject.storyboard; sourceTree = "<group>"; };
 		F31E3FEEF8CDAF41E87C20F5EED7BEDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F43BFF74F47385C45E8E3809B25B4B88 /* uploadCameraPhoto.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = uploadCameraPhoto.storyboard; path = ../../../uploadCameraPhoto.storyboard; sourceTree = "<group>"; };
+		F43BFF74F47385C45E8E3809B25B4B88 /* uploadCameraPhoto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = uploadCameraPhoto.storyboard; sourceTree = "<group>"; };
 		F7CD67E277569E41CF69B7B42858CEB3 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
 		FF18D8A87C3D16CC36C62F016FD32EB7 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
