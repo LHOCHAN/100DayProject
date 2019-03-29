@@ -119,6 +119,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		58BF90CC2883DE560AD0C3CB4EF44364 /* UploadTaskCamera */ = {
+			isa = PBXGroup;
+			children = (
+				166C6335B639E22CDC6F5F95F94DE156 /* CameraRollCollectionViewCell.swift */,
+				EE662028C0CDC3818AFE80D78AB333D3 /* CameraRollViewController.swift */,
+				56E71237C149674378D3124033FE2009 /* UploadCameraPhotoViewController.swift */,
+				F43BFF74F47385C45E8E3809B25B4B88 /* uploadCameraPhoto.storyboard */,
+			);
+			path = UploadTaskCamera;
+			sourceTree = "<group>";
+		};
+		A0590E50D396F7D78BC99A982DADD795 = {
+			isa = PBXGroup;
+			children = (
+				02460136D9164B33C8E64751E7395546 /* 100DayProject */,
+				126BD7109CAD45669777952EA2CB5C3D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
 		A7189BCE3F8831B9C008FBCD75F0912A /* Sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,25 +171,6 @@
 			);
 			name = Font;
 			path = "New Group";
-			sourceTree = "<group>";
-		};
-		58BF90CC2883DE560AD0C3CB4EF44364 /* UploadTaskCamera */ = {
-			isa = PBXGroup;
-			children = (
-				166C6335B639E22CDC6F5F95F94DE156 /* CameraRollCollectionViewCell.swift */,
-				EE662028C0CDC3818AFE80D78AB333D3 /* CameraRollViewController.swift */,
-				56E71237C149674378D3124033FE2009 /* UploadCameraPhotoViewController.swift */,
-				F43BFF74F47385C45E8E3809B25B4B88 /* uploadCameraPhoto.storyboard */,
-			);
-			path = UploadTaskCamera;
-			sourceTree = "<group>";
-		};
-		A0590E50D396F7D78BC99A982DADD795 = {
-			isa = PBXGroup;
-			children = (
-				02460136D9164B33C8E64751E7395546 /* 100DayProject */,
-				126BD7109CAD45669777952EA2CB5C3D /* Products */,
-			);
 			sourceTree = "<group>";
 		};
 		D0E70FEACB8DF21A221AC4BC3A6DCC9A /* CreateNewProject */ = {
