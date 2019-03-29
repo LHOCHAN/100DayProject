@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>&quot;마이크 접근&quot;</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -29,9 +31,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>"카메라 접근"</string>
+	<string>&quot;카메라 접근&quot;</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>"사진 접근"</string>
+	<string>&quot;사진 접근&quot;</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Lato-Black</string>
