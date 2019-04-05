@@ -10,8 +10,10 @@
 		05EAE5F8F0BAFEB45695D89792AA6303 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE05F8540FA5640F4A3E3AABC89D7BB8 /* Lato-Regular.ttf */; };
 		0EA3C49C301E5C186F5584FC1EDD81B5 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7CD67E277569E41CF69B7B42858CEB3 /* Lato-BoldItalic.ttf */; };
 		143D845B0791A124F6D7ECFC4379C00E /* RecordSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD52D9B1BA011032902FF645BF5A8E /* RecordSoundViewController.swift */; };
+		17499910789A40C11EFE391390BC54D4 /* SoundOverviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8C0F1BE519C0F30906F7AE6FB72A24 /* SoundOverviewCollectionViewCell.xib */; };
 		187890473E8F349DCEE6287A2281FBDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20D78AA3B7F898752F68B697C9CFA2B /* LaunchScreen.storyboard */; };
 		1BBEDC314D59BCF66D80FDA8C5DA17BB /* UploadCameraPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E71237C149674378D3124033FE2009 /* UploadCameraPhotoViewController.swift */; };
+		244291BA69CC134A99B88873A9A8F97C /* SoundProjectOverview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C672FC309177EBB711F6DA66BEBDDA1 /* SoundProjectOverview.storyboard */; };
 		2B904EC6F49720973AEEEC2BEA4F0E03 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B20D6A9D12E9023E1D77C5A788CABEE /* Lato-Italic.ttf */; };
 		3529815248EBC044F85EEEA4AA92FC80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7315DA42A8AA3BEAFE917FACD63CF7A /* Assets.xcassets */; };
 		3ACF7BCD4418C0E2487038B3A1BE76A9 /* RecordSound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3567B6C072B8BDD0AFEC554CA75F5018 /* RecordSound.storyboard */; };
@@ -27,16 +29,20 @@
 		792065285315246F8943450B1B8D987D /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1ED528C2CB00B478F7D10AD1DBDAA6A1 /* Lato-BlackItalic.ttf */; };
 		7BEF46E7C48554E01B2D2839487CB4DE /* CameraRollCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166C6335B639E22CDC6F5F95F94DE156 /* CameraRollCollectionViewCell.swift */; };
 		8B96EACC2F6F51570A4278FFC7E0122B /* StartNewProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDE8B7911BA00644D58211F01A40479 /* StartNewProjectViewController.swift */; };
+		8CE037E65CECCCEABBE4775392144A44 /* SoundProjectOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64774678E1F44B1E36090C0618DACE4B /* SoundProjectOverviewViewController.swift */; };
+		8DB0FDE0BB04E5E0D6B698BF316392DF /* ProjectOverviewCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44832446B8D581ADA7E1F3D9FF64232C /* ProjectOverviewCollectionReusableView.xib */; };
 		91FBC65C3C2F4060EE101682352DF4CD /* CreatNewProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9D01E764912F71D37F5172FD47B86D /* CreatNewProjectViewController.swift */; };
 		9CA49280A423E584093EEB259BE0DC6B /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F75AB8E6AB0B8BD30543796A1ACD0F2 /* Lato-Bold.ttf */; };
 		9DA7E25CB17DA830BBAC2A46B84D5DE3 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C7757C10299315C17FE121286B86A1D /* Lato-Thin.ttf */; };
 		A0668E0C8667214AA3D4AE61F95D831E /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 648A5267F482667E051EEABCCDC9A695 /* Lato-HairlineItalic.ttf */; };
 		A62460DBDE2798AF43BFEB87B58DFE66 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D34275C5DFB9151FE1AE2CE9AFCFB /* CustomTextField.swift */; };
+		B08B119278DA07FC5086698EFF4CB3C7 /* ProjectOverviewCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D262F8AF35A2649A0D0B12068EF74A69 /* ProjectOverviewCollectionReusableView.swift */; };
 		BF70BAE92044625F0410C9EBA80A5044 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3F506CB4FDEC041E4F365DCFF628219 /* Lato-ThinItalic.ttf */; };
 		C6820478D8CF0809FB861391C0E05C9A /* Lato-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 628CF0A2E39658291DFDB8350F2C8E1A /* Lato-MediumItalic.ttf */; };
 		CC26B571999D1B3B3C8F2AA6E2324AD6 /* CameraRollPhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BA1931C528269AFB97B089785564E8 /* CameraRollPhotoListViewController.swift */; };
 		D3057CA3B2218C868D579B85873EC784 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6DA03A591773F512B23BCEF857D8BB /* Lato-Light.ttf */; };
 		D5209CFD11EEAA98D14BA85B8CF9D639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965C1E28B1DCBA1062D78EB08DDBD12C /* AppDelegate.swift */; };
+		D75CFC9C59AF2C3E08E8B4BEB4C220D3 /* SoundOverviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424892150AF0D9849A358FECD4EC7EB4 /* SoundOverviewCollectionViewCell.swift */; };
 		DBB2882860BE56F0BD11ACCD7E0DD846 /* uploadCameraPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43BFF74F47385C45E8E3809B25B4B88 /* uploadCameraPhoto.storyboard */; };
 		E3594E1B792045B47079CBABBF43759F /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC0CB0C6D1268D393516E35D1F16B531 /* Lato-Medium.ttf */; };
 		E7B067F43E5BEEC908A958AC787891E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B705BA336A9B3BE626367E80395D5 /* ViewController.swift */; };
@@ -55,24 +61,30 @@
 		2DDE8B7911BA00644D58211F01A40479 /* StartNewProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartNewProjectViewController.swift; sourceTree = "<group>"; };
 		3567B6C072B8BDD0AFEC554CA75F5018 /* RecordSound.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecordSound.storyboard; sourceTree = "<group>"; };
 		402D5C574C43AB94891A282673942679 /* UploadCameraPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCameraPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		424892150AF0D9849A358FECD4EC7EB4 /* SoundOverviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundOverviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		44832446B8D581ADA7E1F3D9FF64232C /* ProjectOverviewCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectOverviewCollectionReusableView.xib; sourceTree = "<group>"; };
 		4B20D6A9D12E9023E1D77C5A788CABEE /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
 		4D7D34275C5DFB9151FE1AE2CE9AFCFB /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		56E71237C149674378D3124033FE2009 /* UploadCameraPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCameraPhotoViewController.swift; sourceTree = "<group>"; };
 		5F75AB8E6AB0B8BD30543796A1ACD0F2 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		628CF0A2E39658291DFDB8350F2C8E1A /* Lato-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-MediumItalic.ttf"; sourceTree = "<group>"; };
+		64774678E1F44B1E36090C0618DACE4B /* SoundProjectOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundProjectOverviewViewController.swift; sourceTree = "<group>"; };
 		648A5267F482667E051EEABCCDC9A695 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		6C672FC309177EBB711F6DA66BEBDDA1 /* SoundProjectOverview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SoundProjectOverview.storyboard; sourceTree = "<group>"; };
 		7C9D01E764912F71D37F5172FD47B86D /* CreatNewProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatNewProjectViewController.swift; sourceTree = "<group>"; };
 		843BBC010A95D4242891161E4A97155F /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		8E6DA03A591773F512B23BCEF857D8BB /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		965C1E28B1DCBA1062D78EB08DDBD12C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2F76B51480DBBA96C7CE92109D52DBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3F506CB4FDEC041E4F365DCFF628219 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		AD8C0F1BE519C0F30906F7AE6FB72A24 /* SoundOverviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundOverviewCollectionViewCell.xib; sourceTree = "<group>"; };
 		BBD69F63EC4D5EF469AC80B88C0F9F74 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
 		BE05F8540FA5640F4A3E3AABC89D7BB8 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		C1BA1931C528269AFB97B089785564E8 /* CameraRollPhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRollPhotoListViewController.swift; sourceTree = "<group>"; };
 		C7315DA42A8AA3BEAFE917FACD63CF7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C92C3A46E5F6802D220C3B4F3C3D370D /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
 		CFD1773089CC0D0CDB7D3154DD0FFBB8 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		D262F8AF35A2649A0D0B12068EF74A69 /* ProjectOverviewCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectOverviewCollectionReusableView.swift; sourceTree = "<group>"; };
 		DC0CB0C6D1268D393516E35D1F16B531 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
 		DE34FD4985398B09796D421CD788BB3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3FD52D9B1BA011032902FF645BF5A8E /* RecordSoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSoundViewController.swift; sourceTree = "<group>"; };
@@ -144,8 +156,14 @@
 		A7189BCE3F8831B9C008FBCD75F0912A /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				D262F8AF35A2649A0D0B12068EF74A69 /* ProjectOverviewCollectionReusableView.swift */,
+				44832446B8D581ADA7E1F3D9FF64232C /* ProjectOverviewCollectionReusableView.xib */,
 				3567B6C072B8BDD0AFEC554CA75F5018 /* RecordSound.storyboard */,
 				E3FD52D9B1BA011032902FF645BF5A8E /* RecordSoundViewController.swift */,
+				424892150AF0D9849A358FECD4EC7EB4 /* SoundOverviewCollectionViewCell.swift */,
+				AD8C0F1BE519C0F30906F7AE6FB72A24 /* SoundOverviewCollectionViewCell.xib */,
+				6C672FC309177EBB711F6DA66BEBDDA1 /* SoundProjectOverview.storyboard */,
+				64774678E1F44B1E36090C0618DACE4B /* SoundProjectOverviewViewController.swift */,
 			);
 			path = Sound;
 			sourceTree = "<group>";
@@ -268,7 +286,10 @@
 				BF70BAE92044625F0410C9EBA80A5044 /* Lato-ThinItalic.ttf in Resources */,
 				187890473E8F349DCEE6287A2281FBDD /* LaunchScreen.storyboard in Resources */,
 				F038D83470CD9EC4666F094E02C48FD7 /* Main.storyboard in Resources */,
+				8DB0FDE0BB04E5E0D6B698BF316392DF /* ProjectOverviewCollectionReusableView.xib in Resources */,
 				3ACF7BCD4418C0E2487038B3A1BE76A9 /* RecordSound.storyboard in Resources */,
+				17499910789A40C11EFE391390BC54D4 /* SoundOverviewCollectionViewCell.xib in Resources */,
+				244291BA69CC134A99B88873A9A8F97C /* SoundProjectOverview.storyboard in Resources */,
 				DBB2882860BE56F0BD11ACCD7E0DD846 /* uploadCameraPhoto.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,7 +306,10 @@
 				CC26B571999D1B3B3C8F2AA6E2324AD6 /* CameraRollPhotoListViewController.swift in Sources */,
 				91FBC65C3C2F4060EE101682352DF4CD /* CreatNewProjectViewController.swift in Sources */,
 				A62460DBDE2798AF43BFEB87B58DFE66 /* CustomTextField.swift in Sources */,
+				B08B119278DA07FC5086698EFF4CB3C7 /* ProjectOverviewCollectionReusableView.swift in Sources */,
 				143D845B0791A124F6D7ECFC4379C00E /* RecordSoundViewController.swift in Sources */,
+				D75CFC9C59AF2C3E08E8B4BEB4C220D3 /* SoundOverviewCollectionViewCell.swift in Sources */,
+				8CE037E65CECCCEABBE4775392144A44 /* SoundProjectOverviewViewController.swift in Sources */,
 				8B96EACC2F6F51570A4278FFC7E0122B /* StartNewProjectViewController.swift in Sources */,
 				754ABEBD8A5F878E3092A78A2137289D /* UploadCameraPhotoCollectionViewCell.swift in Sources */,
 				1BBEDC314D59BCF66D80FDA8C5DA17BB /* UploadCameraPhotoViewController.swift in Sources */,
